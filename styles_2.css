@@ -1,0 +1,86 @@
+/* Reset and General Styling */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 1em;
+    background-color: #f5f5f5;
+}
+
+/* Header Styling */
+header {
+    background-image: url('https://img.freepik.com/premium-vector/abstract-geometric-background-colorful-line-composition-vector-design-your-business-presentation_258706-166.jpg'); /* Replace with the path or URL of your background image */
+    background-size: cover;
+    background-position: center;    
+    color: #000000;
+    padding: 1em;
+    text-align: center;
+    margin-bottom: 1em;
+    position: relative;
+}
+#logo {
+    width: 300px; /* Adjust the width as needed */
+    height: 200px;
+    margin-right: 10px; /* Add margin for spacing */
+}
+h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+/* Form and Result Styling */
+#imageForm {
+    max-width: 500px;
+    margin: auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+input[type="file"] {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#result {
+    border: 1px solid #ccc;
+    padding: 1em;
+    margin-top: 1em;
+}
+
+#result p {
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+/* Specific Styling */
+section {
+    margin-bottom: 2em;
+}
+
+#imageInput {
+    width: 100%;
+}
+
+/* Section Headings and Paragraphs */
+section h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+section p {
+    font-size: 1.1em;
+    line-height: 1.5;
+}
