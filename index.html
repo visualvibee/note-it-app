@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image to Text Converter</title>
+    <link rel="stylesheet" href="static/styles.css">
+
+    <!-- Add these styles inside the head tag of each HTML file -->
+    <style>
+        :root {
+            --primary-color: #b890bd;   /* Brown */
+            --secondary-color: #a7bde4; /* Lavender Gray */
+            --background-color: #ffffff; /* Vanilla Ice */
+        }
+
+        body {
+            background-color: var(--background-color);
+        }
+
+        header {
+            background-color: var(--primary-color);
+        }
+
+        #imageForm {
+            background-color: var(--secondary-color);
+            max-width: 600px;
+            margin: auto;
+            padding: 2em;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 1em 2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+            margin: 0 auto; /* Center the button */
+        }
+
+        button:hover {
+            background-color: #5c2b00; /* Darken the color manually or adjust as needed */
+        }
+
+        #result {
+            background-color: #fff;
+        }
+
+        /* Center the text in the section */
+        section {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://api.logo.com/api/v2/images?logo=logo_c34cbc21-1559-4a59-822b-988431f147c8&u=1705726897050&format=svg&margins=166&width=1000&height=750&fit=contain" alt="Logo" id="logo">
+        <h1>Image to Text Converter</h1>
+    </header>
+
+    <section>
+        <p>Convert your images to text and save it as notes effortlessly.</p>
+        
+        <form action="/upload" method="post" enctype="multipart/form-data" id="imageForm">
+            <input type="file" name="image" accept="image/*" required>
+            <button type="submit">Upload and Extract Text</button>
+        </form>
+
+        <div id="result">
+            <!-- Display converted text here -->
+        </div>
+    </section>
+
+    <section>
+        <h2 onclick="toggleAccordion(this)">How it Works</h2>
+        <div class="accordion-content">
+            <p>Upload an image, click the "Convert" button, and the text extracted from the image will be displayed below. You can then save the text as notes.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2 onclick="toggleAccordion(this)">Why Choose Us</h2>
+        <div class="accordion-content">
+            <p>Our image to text converter provides a simple and efficient way to turn your images into editable text. Save your notes quickly and hassle-free.</p>
+        </div>
+    </section>
+
+    <script>
+        // Corrected function to toggle accordion
+        function toggleAccordion(accordionHeader) {
+            var content = accordionHeader.nextElementSibling;
+
+            // Toggle the "active" class to open/close the accordion
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        }
+    </script>
+</body>
+</html>
