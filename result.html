@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result - Image to Text Converter</title>
+    <link rel="stylesheet" href="static/styles.css">
+
+    <!-- Add these styles inside the head tag of each HTML file -->
+    <style>
+        :root {
+            --primary-color: #b890bd;   /* Brown */
+            --secondary-color: #a7bde4; /* Lavender Gray */
+            --background-color: #ffffff; /* Vanilla Ice */
+        }
+
+        body {
+            background-color: var(--background-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 1em;
+            color: #333;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            text-align: center;
+            padding: 2em;
+            margin-bottom: 2em;
+        }
+
+        section {
+            text-align: center;
+            margin-bottom: 3em;
+        }
+
+        #resultImage {
+            max-width: 100%;
+            height: auto;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 1em;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        #additionalFeatures {
+            margin-top: 1em;
+        }
+
+        button {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 1em 2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+            margin: 0 1em;
+        }
+
+        button:hover {
+            background-color: #5c2b00;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 2em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Adjusted logo and header content as needed -->
+        <img src="https://api.logo.com/api/v2/images?logo=logo_c34cbc21-1559-4a59-822b-988431f147c8&u=1705726897050&format=svg&margins=166&width=1000&height=750&fit=contain" alt="Logo" id="logo">
+        <h1>Image to Text Converter</h1>
+    </header>
+
+    <section>
+        <div id="resultImage">
+            <img src="data:image/jpeg;base64,{{ img_base64 }}" alt="Uploaded Image">
+        </div>
+
+        <h2>Extracted Text:</h2>
+        <p id="extractedText">{{ text }}</p>
+
+        <div id="additionalFeatures">
+            <button onclick="searchOnGoogle()">Search on Google</button>
+            <button onclick="createNewNote()">Create New Note</button>
+            <!-- Add the copy to clipboard button -->
+            <button onclick="copyToClipboard()">Copy to Clipboard</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Image to Text Converter | All rights reserved</p>
+    </footer>
+
+    <script>
+        // Your existing JavaScript code
+    </script>
+</body>
+</html>
