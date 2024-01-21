@@ -1,0 +1,159 @@
+/* Reset and General Styling */
+:root {
+    --primary-color: #b890bd;   /* Brown */
+    --secondary-color: #a7bde4; /* Lavender Gray */
+    --background-color: #fff8e8; /* Vanilla Ice */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 1em;
+    background-color: var(--background-color);
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    background-image: url('https://img.freepik.com/premium-vector/abstract-geometric-background-colorful-line-composition-vector-design-your-business-presentation_258706-166.jpg');
+    background-size: cover;
+    background-position: center;    
+    color: #000000;
+    padding: 2em;
+    text-align: center;
+    margin-bottom: 2em;
+    position: relative;
+}
+
+#logo {
+    width: 250px;
+    height: 200px;
+    margin-right: 10px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+/* Form and Result Styling */
+#imageForm {
+    max-width: 600px;
+    margin: auto;
+    background-color: var(--secondary-color);
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 1em;
+}
+
+input[type="file"] {
+    width: 100%;
+    padding: 1em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin: 0 auto; /* Center the button */
+}
+
+button:hover {
+    background-color: #5c2b00; /* Darken the color manually or adjust as needed */
+}
+
+#result {
+    border: 1px solid #ccc;
+    padding: 1em;
+    margin-top: 2em;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+/* Specific Styling */
+section {
+    margin-bottom: 3em;
+}
+
+#imageInput {
+    width: 100%;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Section Headings and Paragraphs */
+section h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Add these animations at the end of the file */
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Slide-up Animation */
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Add a common class for animations */
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+/* Apply fade-in animation to header and sections */
+header, section {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Apply slide-up animation to buttons */
+button {
+    animation: slideUp 0.5s ease-in-out;
+}
+
+/* Accordion Animation */
+@keyframes expandAccordion {
+    from {
+        max-height: 0;
+    }
+    to {
+        max-height: 500px; /* Adjust the max-height as needed */
+    }
+}
+
+/* Apply expandAccordion animation to accordion-content class */
+.section .accordion-content {
+    animation: expandAccordion 0.5s ease-in-out;
+}
